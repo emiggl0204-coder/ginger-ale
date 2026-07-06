@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Ginger Ale - Escuela de Coctelería y Barismo. Cursos presenciales, virtuales, eventos y productos profesionales.">
+
+<meta name="keywords"
+content="coctelería, bartender, barista, café, cursos, escuela, Ginger Ale">
+
+<meta name="author"
+content="Ginger Ale">
+
+<title>Ginger Ale | Escuela de Coctelería y Barismo</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#111;
+color:#fff;
+line-height:1.6;
+
+}
+
+/*======================
+BOTÓN SALTAR CONTENIDO
+=======================*/
+
+.skip-link{
+
+position:absolute;
+left:-9999px;
+top:auto;
+
+background:#1f4fff;
+color:white;
+
+padding:15px 25px;
+
+z-index:5000;
+
+text-decoration:none;
+
+font-weight:bold;
+
+border-radius:8px;
+
+}
+
+.skip-link:focus{
+
+left:20px;
+top:20px;
+
+}
+
+/*====================
+FOCUS ACCESIBLE
+=====================*/
+
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus{
+
+outline:3px solid #FFD54F;
+
+outline-offset:4px;
+
+}
+
+/*====================
+HEADER
+=====================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+background:#0f0f0f;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 25px;
+
+box-shadow:0 3px 10px rgba(0,0,0,.5);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:bold;
+
+letter-spacing:2px;
+
+}
+
+nav{
+
+position:relative;
+
+}
+
+.menu-btn{
+
+width:48px;
+
+height:48px;
+
+font-size:26px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+background:#1f4fff;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.menu-btn:hover{
+
+background:#2740b9;
+
+}
+
+.dropdown{
+
+display:none;
+
+position:absolute;
+
+right:0;
+
+top:70px;
+
+background:#1b1b1b;
+
+border-radius:10px;
+
+width:240px;
+
+overflow:hidden;
+
+box-shadow:0 10px 20px rgba(0,0,0,.4);
+
+}
+
+.dropdown.show{
+
+display:block;
+
+}
+
+.dropdown a{
+
+display:block;
+
+padding:16px;
+
+text-decoration:none;
+
+color:white;
+
+border-bottom:1px solid #333;
+
+transition:.3s;
+
+}
+
+.dropdown a:hover,
+.dropdown a:focus{
+
+background:#1f4fff;
+
+}
+
+/*====================
+HERO
+=====================*/
+
+.hero{
+
+height:100vh;
+
+background:url("https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1600&auto=format&fit=crop")
+center center/cover;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:rgba(0,0,0,.65);
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+max-width:850px;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:1.15rem;
+
+margin-bottom:35px;
+
+}
+
+/*====================
+BOTONES
+=====================*/
+
+.btn{
+
+display:inline-block;
+
+padding:15px 28px;
+
+background:#1f4fff;
+
+border:none;
+
+border-radius:8px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.btn:hover,
+.btn:focus{
+
+background:#2740b9;
+
+transform:scale(1.05);
+
+}
+
+/*====================
+SECCIONES
+=====================*/
+
+main{
+
+margin-top:80px;
+
+}
+
+section{
+
+padding:100px 20px;
+
+}
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:2.3rem;
+
+margin-bottom:40px;
+
+color:#3d7bff;
+
+}
+
+/*====================
+CARDS
+=====================*/
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+.card{
+
+background:#1c1c1c;
+
+border:1px solid #2f2f2f;
+
+border-radius:15px;
+
+overflow:hidden;
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+.card-content{
+
+padding:20px;
+
+}
+
+.card-content h3{
+
+margin-bottom:15px;
+
+}
+
+.card-content p{
+
+color:#ccc;
+
+margin-bottom:20px;
+
+}
+
+/*====================
+FORMULARIO
+=====================*/
+
+form{
+
+max-width:700px;
+
+margin:40px auto 0;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+label{
+
+font-weight:bold;
+
+display:block;
+
+margin-bottom:6px;
+
+}
+
+input,
+select,
+textarea{
+
+width:100%;
+
+padding:12px;
+
+background:#222;
+
+border:1px solid #555;
+
+border-radius:8px;
+
+color:white;
+
+font-size:16px;
+
+}
+
+textarea{
+
+resize:vertical;
+
+min-height:130px;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+color:#bbb;
+
+}
+
+/*====================
+SOCIALES
+=====================*/
+
+.socials{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+.socials a{
+
+background:#1f4fff;
+
+padding:14px 24px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.3s;
+
+}
+
+.socials a:hover,
+.socials a:focus{
+
+background:#2740b9;
+
+}
+
+/*====================
+FOOTER
+=====================*/
+
+footer{
+
+background:#0c0c0c;
+
+padding:35px;
+
+text-align:center;
+
+color:#999;
+
+}
+
+/*====================
+RESPONSIVE
+=====================*/
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:2.2rem;
+
+}
+
+.hero p{
+
+font-size:1rem;
+
+}
+
+.dropdown{
+
+width:95vw;
+
+right:0;
+
+}
+
+.section-title{
+
+font-size:2rem;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a class="skip-link" href="#contenido">
+Saltar al contenido principal
+</a>
+
+<!-- ==========================
+HEADER
+========================== -->
+
+<header role="banner">
+
+    <div class="logo">
+        <span>GINGER ALE</span>
+    </div>
+
+    <nav aria-label="Menú principal">
+
+        <button
+            class="menu-btn"
+            id="menuButton"
+            aria-label="Abrir menú de navegación"
+            aria-controls="menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+        <div
+            class="dropdown"
+            id="menu"
+            role="menu">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#cursos">Cursos</a>
+            <a href="#virtuales">Cursos Virtuales</a>
+            <a href="#profesores">Profesores</a>
+            <a href="#eventos">Eventos</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ==========================
+CONTENIDO PRINCIPAL
+========================== -->
+
+<main id="contenido">
+
+<!-- ==========================
+HERO
+========================== -->
+
+<section
+id="inicio"
+class="hero">
+
+<div class="hero-content">
+
+<h1>
+Escuela de Coctelería y Barismo
+</h1>
+
+<p>
+
+Formación profesional para bartenders,
+baristas y amantes del café.
+
+Aprendé mediante clases prácticas,
+equipamiento profesional y certificación.
+
+</p>
+
+<a
+href="#cursos"
+class="btn">
+
+Ver Cursos
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ==========================
+CURSOS PRESENCIALES
+========================== -->
+
+<section id="cursos">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Cursos Presenciales
+
+</h2>
+
+<div class="cards">
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<img
+
+src="https://images.unsplash.com/photo-1517701550927-30cf4ba1fcef?q=80&w=1200&auto=format&fit=crop"
+
+alt="Barista preparando un café espresso en una máquina profesional"
+
+>
+
+<div class="card-content">
+
+<h3>
+
+Barista Profesional
+
+</h3>
+
+<p>
+
+Aprendé espresso,
+latte art,
+molienda,
+extracción,
+texturizado de leche
+y calibración de molinos.
+
+</p>
+
+<button
+class="btn"
+type="button">
+
+Inscribirme
+
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<img
+
+src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=1200&auto=format&fit=crop"
+
+alt="Bartender preparando un cóctel profesional detrás de una barra"
+
+>
+
+<div class="card-content">
+
+<h3>
+
+Bartender Profesional
+
+</h3>
+
+<p>
+
+Coctelería clásica,
+moderna,
+mixología,
+flair,
+servicio de barra
+y atención al cliente.
+
+</p>
+
+<button
+class="btn"
+type="button">
+
+Inscribirme
+
+</button>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<img
+
+src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?q=80&w=1200&auto=format&fit=crop"
+
+alt="Grupo de estudiantes practicando técnicas de coctelería"
+
+>
+
+<div class="card-content">
+
+<h3>
+
+Curso Intensivo
+
+</h3>
+
+<p>
+
+Capacitación acelerada para comenzar
+a trabajar como bartender o barista
+en pocas semanas.
+
+</p>
+
+<button
+class="btn"
+type="button">
+
+Inscribirme
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ==========================
+CURSOS VIRTUALES
+========================== -->
+
+<section id="virtuales">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Cursos Virtuales
+        </h2>
+
+        <div class="cards">
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+                alt="Alumno realizando un curso virtual de barismo desde una computadora">
+
+                <div class="card-content">
+
+                    <h3>Barismo Online</h3>
+
+                    <p>
+
+                        Aprendé desde cualquier lugar mediante clases grabadas,
+                        material descargable y acompañamiento de profesores.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Más información
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+                alt="Preparación de un cóctel durante un curso virtual">
+
+                <div class="card-content">
+
+                    <h3>Coctelería Online</h3>
+
+                    <p>
+
+                        Aprende recetas,
+                        técnicas modernas,
+                        decoración y preparación
+                        paso a paso.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Más información
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PROFESORES
+========================== -->
+
+<section id="profesores">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Nuestro Equipo
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+                alt="Profesor de coctelería enseñando técnicas profesionales">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Profesionales Certificados
+
+                    </h3>
+
+                    <p>
+
+                        Nuestro equipo posee experiencia nacional e internacional
+                        en cafetería, coctelería, mixología y servicio gastronómico.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+                alt="Instructor explicando técnicas de barismo">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Clases Personalizadas
+
+                    </h3>
+
+                    <p>
+
+                        Grupos reducidos para lograr un aprendizaje práctico,
+                        dinámico y con seguimiento permanente.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+EVENTOS
+========================== -->
+
+<section id="eventos">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Barra Móvil y Eventos
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
+                alt="Servicio de barra móvil en un evento empresarial">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Eventos Sociales y Empresariales
+
+                    </h3>
+
+                    <p>
+
+                        Servicio profesional para casamientos,
+                        cumpleaños,
+                        eventos corporativos
+                        y coffee break.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Solicitar Presupuesto
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1200&auto=format&fit=crop"
+                alt="Bartender preparando bebidas durante un evento">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Eventos Personalizados
+
+                    </h3>
+
+                    <p>
+
+                        Diseñamos una propuesta adaptada
+                        a cada cliente,
+                        incluyendo tragos exclusivos
+                        y decoración temática.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Consultar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PRODUCTOS
+========================== -->
+
+<section id="productos">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Productos e Insumos
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1200&auto=format&fit=crop"
+                alt="Kit profesional para bartender con coctelera y accesorios">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Kit Bartender
+
+                    </h3>
+
+                    <p>
+
+                        Coctelera,
+                        medidor,
+                        cuchara imperial,
+                        colador
+                        y accesorios profesionales.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop"
+                alt="Máquina de café profesional para entrenamiento de baristas">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Cafeteras
+
+                    </h3>
+
+                    <p>
+
+                        Equipamiento profesional
+                        para cafeterías,
+                        escuelas
+                        y entrenamiento.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop"
+                alt="Accesorios para preparación de café y barismo">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Accesorios
+
+                    </h3>
+
+                    <p>
+
+                        Jarras,
+                        tamper,
+                        molinos,
+                        vasos medidores
+                        y herramientas profesionales.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+CURSOS VIRTUALES
+========================== -->
+
+<section id="virtuales">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Cursos Virtuales
+        </h2>
+
+        <div class="cards">
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop"
+                alt="Alumno realizando un curso virtual de barismo desde una computadora">
+
+                <div class="card-content">
+
+                    <h3>Barismo Online</h3>
+
+                    <p>
+
+                        Aprendé desde cualquier lugar mediante clases grabadas,
+                        material descargable y acompañamiento de profesores.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Más información
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- CARD -->
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1200&auto=format&fit=crop"
+                alt="Preparación de un cóctel durante un curso virtual">
+
+                <div class="card-content">
+
+                    <h3>Coctelería Online</h3>
+
+                    <p>
+
+                        Aprende recetas,
+                        técnicas modernas,
+                        decoración y preparación
+                        paso a paso.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Más información
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PROFESORES
+========================== -->
+
+<section id="profesores">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Nuestro Equipo
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop"
+                alt="Profesor de coctelería enseñando técnicas profesionales">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Profesionales Certificados
+
+                    </h3>
+
+                    <p>
+
+                        Nuestro equipo posee experiencia nacional e internacional
+                        en cafetería, coctelería, mixología y servicio gastronómico.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop"
+                alt="Instructor explicando técnicas de barismo">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Clases Personalizadas
+
+                    </h3>
+
+                    <p>
+
+                        Grupos reducidos para lograr un aprendizaje práctico,
+                        dinámico y con seguimiento permanente.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+EVENTOS
+========================== -->
+
+<section id="eventos">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Barra Móvil y Eventos
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
+                alt="Servicio de barra móvil en un evento empresarial">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Eventos Sociales y Empresariales
+
+                    </h3>
+
+                    <p>
+
+                        Servicio profesional para casamientos,
+                        cumpleaños,
+                        eventos corporativos
+                        y coffee break.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Solicitar Presupuesto
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1200&auto=format&fit=crop"
+                alt="Bartender preparando bebidas durante un evento">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Eventos Personalizados
+
+                    </h3>
+
+                    <p>
+
+                        Diseñamos una propuesta adaptada
+                        a cada cliente,
+                        incluyendo tragos exclusivos
+                        y decoración temática.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Consultar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+PRODUCTOS
+========================== -->
+
+<section id="productos">
+
+    <div class="container">
+
+        <h2 class="section-title">
+
+            Productos e Insumos
+
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1200&auto=format&fit=crop"
+                alt="Kit profesional para bartender con coctelera y accesorios">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Kit Bartender
+
+                    </h3>
+
+                    <p>
+
+                        Coctelera,
+                        medidor,
+                        cuchara imperial,
+                        colador
+                        y accesorios profesionales.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop"
+                alt="Máquina de café profesional para entrenamiento de baristas">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Cafeteras
+
+                    </h3>
+
+                    <p>
+
+                        Equipamiento profesional
+                        para cafeterías,
+                        escuelas
+                        y entrenamiento.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop"
+                alt="Accesorios para preparación de café y barismo">
+
+                <div class="card-content">
+
+                    <h3>
+
+                        Accesorios
+
+                    </h3>
+
+                    <p>
+
+                        Jarras,
+                        tamper,
+                        molinos,
+                        vasos medidores
+                        y herramientas profesionales.
+
+                    </p>
+
+                    <button
+                    class="btn"
+                    type="button">
+
+                        Comprar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+JAVASCRIPT
+========================== -->
+
+<script>
+
+/*=============================
+MENÚ ACCESIBLE
+=============================*/
+
+const menuButton = document.getElementById("menuButton");
+const menu = document.getElementById("menu");
+
+function toggleMenu(){
+
+    const expanded =
+    menuButton.getAttribute("aria-expanded")==="true";
+
+    menuButton.setAttribute(
+        "aria-expanded",
+        !expanded
+    );
+
+    menu.classList.toggle("show");
+
+}
+
+menuButton.addEventListener("click",toggleMenu);
+
+/*=============================
+ABRIR CON ENTER O ESPACIO
+=============================*/
+
+menuButton.addEventListener("keydown",function(e){
+
+    if(e.key==="Enter" || e.key===" "){
+
+        e.preventDefault();
+
+        toggleMenu();
+
+    }
+
+});
+
+/*=============================
+CERRAR CON ESCAPE
+=============================*/
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        menu.classList.remove("show");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        menuButton.focus();
+
+    }
+
+});
+
+/*=============================
+CLICK FUERA DEL MENÚ
+=============================*/
+
+document.addEventListener("click",function(e){
+
+    if(
+        !menu.contains(e.target)
+        &&
+        !menuButton.contains(e.target)
+    ){
+
+        menu.classList.remove("show");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    }
+
+});
+
+/*=============================
+CERRAR MENÚ AL HACER CLICK
+=============================*/
+
+document
+.querySelectorAll(".dropdown a")
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        menu.classList.remove("show");
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+    });
+
+});
+
+/*=============================
+FORMULARIO
+=============================*/
+
+const formulario =
+document.getElementById("formulario");
+
+formulario.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    if(formulario.checkValidity()){
+
+        alert(
+        "Gracias por contactarte con Ginger Ale.\n\nTu solicitud fue enviada correctamente."
+        );
+
+        formulario.reset();
+
+    }else{
+
+        formulario.reportValidity();
+
+    }
+
+});
+
+/*=============================
+NAVEGACIÓN SUAVE
+=============================*/
+
+document
+.querySelectorAll('a[href^="#"]')
+.forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const destino=
+document.querySelector(
+this.getAttribute("href")
+);
+
+if(destino){
+
+destino.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+/*=============================
+BOTONES DEMOSTRACIÓN
+=============================*/
+
+document
+.querySelectorAll(".btn")
+.forEach(boton=>{
+
+if(boton.type==="button"){
+
+boton.addEventListener("click",()=>{
+
+const texto=boton.textContent.trim();
+
+switch(texto){
+
+case "Inscribirme":
+
+alert(
+"Inscripción iniciada correctamente."
+);
+
+break;
+
+case "Más información":
+
+alert(
+"Próximamente podrás acceder a toda la información del curso."
+);
+
+break;
+
+case "Comprar":
+
+alert(
+"Producto agregado correctamente."
+);
+
+break;
+
+case "Consultar":
+
+alert(
+"Gracias por tu consulta."
+);
+
+break;
+
+case "Solicitar Presupuesto":
+
+document
+.getElementById("contacto")
+.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+break;
+
+}
+
+});
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
